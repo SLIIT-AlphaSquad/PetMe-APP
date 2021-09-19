@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "146521059453",
+    "project_id": "petmelogin",
+    "storage_bucket": "petmelogin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:146521059453:android:b5652595051c7062814114",
+        "android_client_info": {
+          "package_name": "com.example.petme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "146521059453-nle037dh9gekq6cdk93fvq3rp0kkc6fq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDra1WOIPut9CzQX0P9c9gt4UWklQpY-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "146521059453-nle037dh9gekq6cdk93fvq3rp0kkc6fq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

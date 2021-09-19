@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">PetMe</string>
+    <string name="PetMe">PetMe</string>
+    <string name="Pavi">Pavi</string>
+    <string name="search_elements">Search Elements</string>
+    <string name="PETS">PETS</string>
+    <string name="FOOD">FOOD</string>
+    <string name="MEDICINE">MEDICINE</string>
+    <string name="EQUIPMENTS">EQUIPMENTS</string>
+    <string name="WANTED">WANTED</string>
+    <string name="TOOY">TOYS</string>
+    <string name="home">Home</string>
+    <string name="shopping">Shop</string>
+    <string name="add">Add</string>
+    <string name="todo">ToDo</string>
+    <string name="growth">Growth</string>
+    <string name="desire">Desire</string>
+    <string name="items">Items</string>
+    <string name="menu_sellDonatePetAds">menu_sellDonatePetAds</string>
+    <string name="menu_desirePetsAds">menu_desirePetsAds</string>
+    <string name="menu_itemsAds">menu_itemsAds</string>
+    <string name="action_settings">action_settings</string>
+    <string name="profile">profile</string>
+</resources>

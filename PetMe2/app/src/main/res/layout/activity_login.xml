@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundimg"
+    android:orientation="vertical"
+    android:textAlignment="center"
+    tools:context=".LoginActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/login_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ImageView
+        android:id="@+id/loginlogo"
+        android:layout_width="196dp"
+        android:layout_height="147dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/petmelogo" />
+
+    <TextView
+        android:id="@+id/login_welcomemsg"
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:text="Welcome to PetMe"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/login_signintocontinue"
+        android:layout_width="153dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="center"
+        android:text="Sign in to Continue"
+        android:textAlignment="center"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/login_username"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/inputs"
+        android:drawableStart="@drawable/ic_user"
+        android:drawablePadding="10dp"
+        android:hint="Enter Username"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="16dp" />
+
+    <EditText
+        android:id="@+id/login_pwd"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/inputs"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawablePadding="10dp"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/login_forgotpwd"
+        android:layout_width="323dp"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password ?"
+        android:textAlignment="textEnd"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="147dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:backgroundTint="#FF7F7F"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/login_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="Don't have an account?  Register"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+</LinearLayout>

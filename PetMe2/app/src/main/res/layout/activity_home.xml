@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_background"
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+      <TextView
+          android:id="@+id/textPetMe"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="15dp"
+          android:layout_marginTop="15dp"
+          android:text="@string/PetMe"
+          android:textColor="@color/colorWhite"
+          android:textSize="25sp"
+          app:layout_constraintEnd_toEndOf="parent"
+
+          app:layout_constraintTop_toTopOf="parent"
+          />
+
+      <ImageView
+          android:id="@+id/imageMenu"
+          android:layout_width="48dp"
+          android:layout_height="48dp"
+          android:layout_marginStart="15dp"
+          android:contentDescription="@string/app_name"
+          android:onClick="ClickMenu"
+          android:src="@drawable/ic_menu"
+          app:layout_constraintBottom_toBottomOf="@id/textPetMe"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="@id/textPetMe"
+          app:tint="@color/colorWhite" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="15dp"
+          android:layout_marginTop="15dp"
+          android:layout_marginEnd="15dp"
+          android:layout_marginBottom="10dp"
+          android:background="@drawable/white_rectangle_background"
+          android:orientation="horizontal"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/imageMenu">
+
+         <EditText
+             android:layout_width="0dp"
+             android:layout_height="40dp"
+             android:layout_weight="1"
+             android:background="@null"
+             android:hint="@string/search_elements"
+             android:imeOptions="actionSearch"
+             android:importantForAutofill="no"
+             android:inputType="text"
+             android:paddingStart="15dp"
+             android:paddingEnd="15dp"
+             android:textColor="@color/colorAccent"
+             android:textSize="16sp"
+             tools:ignore="TouchTargetSizeCheck" />
+
+         <ImageView
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:background="@drawable/search_icon_background"
+             android:contentDescription="@string/app_name"
+             android:padding="6dp"
+             android:src="@drawable/ic_search"
+             app:tint="@color/colorPrimary" />
+
+      </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:overScrollMode="never"
+       android:scrollbars="none"
+       app:layout_constraintBottom_toTopOf="@+id/viewDivider"
+       app:layout_constraintTop_toTopOf="@id/layoutHeader">
+
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+
+         <LinearLayout
+             android:id="@+id/layoutGoal"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="150dp"
+             android:background="@drawable/white_rectangle_background"
+             android:gravity="center"
+             android:orientation="vertical"
+             android:padding="1dp"
+             app:layout_constraintDimensionRatio="H,1:1"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintEnd_toStartOf="@id/layoutFood"
+             app:layout_constraintTop_toTopOf="parent"
+             >
+
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/app_name"
+                android:padding="8dp"
+                android:src="@drawable/pet"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/PETS"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            </LinearLayout>
+
+         <!--pet end-->
+
+         <LinearLayout
+             android:id="@+id/layoutFood"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="150dp"
+             android:layout_marginLeft="-200dp"
+             android:background="@drawable/white_rectangle_background"
+             android:gravity="center"
+             android:orientation="vertical"
+             app:layout_constraintStart_toEndOf="@id/layoutGoal"
+             android:padding="1dp"
+             app:layout_constraintDimensionRatio="H,1:1"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+
+             >
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/app_name"
+                android:padding="8dp"
+                android:src="@drawable/foodi"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/FOOD"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+         </LinearLayout>
+
+         <!--food end-->
+
+
+         <LinearLayout
+             android:id="@+id/layoutMedicine"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="15dp"
+             android:background="@drawable/white_rectangle_background"
+             android:gravity="center"
+             android:orientation="vertical"
+             android:padding="1dp"
+             app:layout_constraintDimensionRatio="H,1:1"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintEnd_toStartOf="@id/layoutFood"
+             app:layout_constraintTop_toBottomOf="@id/layoutGoal"
+             >
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/app_name"
+                android:padding="8dp"
+                android:src="@drawable/med"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/MEDICINE"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            </LinearLayout>
+
+         <!--Medicine end-->
+
+         <LinearLayout
+             android:id="@+id/layoutEquipment"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="15dp"
+             android:layout_marginLeft="-200dp"
+             android:background="@drawable/white_rectangle_background"
+             android:gravity="center"
+             android:orientation="vertical"
+             app:layout_constraintStart_toEndOf="@id/layoutGoal"
+             android:padding="1dp"
+             app:layout_constraintDimensionRatio="H,1:1"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/layoutFood"
+
+             >
+
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/app_name"
+                android:padding="8dp"
+                android:src="@drawable/equ"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/EQUIPMENTS"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+         </LinearLayout>
+
+         <!--end of EQUIPMENTS-->
+         <LinearLayout
+             android:id="@+id/layoutToy"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="15dp"
+             android:background="@drawable/white_rectangle_background"
+             android:gravity="center"
+             android:orientation="vertical"
+             android:padding="1dp"
+             app:layout_constraintDimensionRatio="H,1:1"
+             app:layout_constraintEnd_toEndOf="@+id/layoutMedicine"
+             app:layout_constraintStart_toStartOf="@+id/layoutMedicine"
+
+             app:layout_constraintTop_toBottomOf="@id/layoutMedicine">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/app_name"
+                android:padding="8dp"
+                android:src="@drawable/toy" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/TOOY"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+         </LinearLayout>
+         <!--End of toys -->
+
+         <LinearLayout
+             android:id="@+id/layoutGrowth"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="15dp"
+             android:layout_marginLeft="-200dp"
+             android:layout_marginRight="-200dp"
+             android:background="@drawable/white_rectangle_background"
+             android:gravity="center"
+             android:orientation="vertical"
+             app:layout_constraintStart_toEndOf="@id/layoutGoal"
+             android:padding="1dp"
+             app:layout_constraintDimensionRatio="H,1:1"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/layoutEquipment"
+
+             >
+
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/app_name"
+                android:padding="8dp"
+                android:src="@drawable/wanted"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/WANTED"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+         </LinearLayout>
+
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+   </ScrollView>
+
+   <com.google.android.material.bottomnavigation.BottomNavigationView
+       android:id="@+id/bottomNavigationView"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:backgroundTint="@color/colorBottom"
+       app:itemIconSize="30dp"
+       app:itemIconTint="@color/colorWhite"
+       app:labelVisibilityMode="unlabeled"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:menu="@menu/navigation_menu" />
+
+
+   <View
+       android:id="@+id/viewDivider"
+       android:layout_width="match_parent"
+       android:layout_height="1dp"
+       android:background="@color/colorDivider"
+       app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
